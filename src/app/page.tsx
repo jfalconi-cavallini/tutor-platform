@@ -3,64 +3,63 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main style={{ padding: 40, maxWidth: 900 }}>
+      <h1 style={{ fontSize: 44, marginBottom: 10 }}>
+        STEM & Engineering Tutoring — Online, 1:1
+      </h1>
+
+      <p style={{ fontSize: 18, lineHeight: 1.6, marginBottom: 24 }}>
+        Personalized tutoring in Math, Physics, Computer Science, and Robotics.
+        Built for students who want confidence, strong fundamentals, and real
+        progress — fast.
+      </p>
+
+      <div style={{ display: "flex", gap: 12, marginBottom: 28 }}>
+        <a
+          href="/auth"
+          style={{
+            padding: "10px 16px",
+            border: "1px solid #e5e7eb",
+            borderRadius: 8,
+            textDecoration: "none",
+          }}
+        >
+          Get Started
+        </a>
+
+        <a
+          href="/dashboard"
+          style={{
+            padding: "10px 16px",
+            border: "1px solid #e5e7eb",
+            borderRadius: 8,
+            textDecoration: "none",
+          }}
+        >
+          Go to Dashboard
+        </a>
+      </div>
+
+      <section style={{ display: "grid", gap: 12 }}>
+        <h2 style={{ fontSize: 24, marginTop: 10 }}>What we help with</h2>
+        <ul style={{ lineHeight: 1.8 }}>
+          <li>Math: Algebra → Calculus (AP / IB support)</li>
+          <li>Physics: Mechanics, Electricity & Magnetism</li>
+          <li>Computer Science: Python, Java, Data Structures</li>
+          <li>Robotics & Engineering: VEX IQ, design + problem solving</li>
+        </ul>
+
+        <h2 style={{ fontSize: 24, marginTop: 10 }}>How it works</h2>
+        <ol style={{ lineHeight: 1.8 }}>
+          <li>Create an account (takes 30 seconds)</li>
+          <li>Choose a package that fits your goal</li>
+          <li>Schedule sessions and meet on Zoom</li>
+        </ol>
+
+        <p style={{ marginTop: 16 }}>
+          Ready to start? <a href="/auth">Create your account</a>.
+        </p>
+      </section>
+    </main>
   );
 }
